@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col">
+    {% include 'readings/snippets/search.html' with query=query %}
+    <hr>
+    <p>{{ count }} resultado(s) para tu busqueda por categoría: <span class="text-hl">"{{ query }}"</span></p>
+    {% include 'readings/snippets/table.html' %}
+</div>
+{% endblock %}

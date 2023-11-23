@@ -1,0 +1,18 @@
+<form method="GET" action="{% url 'list_food' %}">
+    <div class="form-group">
+        <label for="food">Nombre del alimento:</label>
+        <input type="text" name="food" id="food" class="form-control" value="{{ request.GET.food }}">
+    </div>
+
+    <div class="form-group">
+        <label for="classification">Clasificación del alimento:</label>
+        <select name="classification" id="classification" class="form-control">
+            <option value="" {% if not request.GET.classification %}selected{% endif %}>Todas las clasificaciones</option>
+            {% for food in object_list %}
+                <option value="{{ food.clasification }}" {% if request.GET.classification == food.clasification %}selected{% endif %}>{{ food.clasification }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Filtrar</button>
+</form>

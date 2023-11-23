@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="col">    
+    <div class="row align-items-end">
+        <div class="col-md-6">
+            <h2 class="margin-sep">Registros</h2>
+        </div>
+        <div class="col-md-6 text-right">
+          <a href="{% url 'anxiety_register' %}" class="btn btn-primary btn-block">Registro de Ansiedad</a>
+        </div>
+    </div>
+    <hr>
+    {% include 'anxiety_registers/snippets/table.html' %}
+</div>
+{% endblock %}

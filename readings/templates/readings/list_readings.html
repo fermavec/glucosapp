@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="col">    
+    <div class="row align-items-end">
+        {% include 'readings/snippets/search.html' %}
+        <hr>
+        <div class="col-md-6">
+            <h2 class="margin-sep">Registros</h2>
+        </div>
+        <div class="col-md-6 text-right">
+          <a href="{% url 'level_register' %}" class="btn btn-primary btn-block">Agregar Registro</a>
+        </div>
+    </div>
+    <hr>
+    {% include 'readings/snippets/table.html' %}
+</div>
+{% endblock %}

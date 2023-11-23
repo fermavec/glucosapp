@@ -1,0 +1,108 @@
+/*Landing Page*/
+.body-landing {
+    background-color: #001f3f; 
+    color: #ffffff;  
+}
+
+.btn-landing {
+    background-color: #001f3f;  
+    border: 1px solid #ffffff;  
+    color: #ffffff;  
+}
+
+.btn-landing:hover {
+    background-color: #ffffff;  
+    color: #001f3f;  
+}
+
+@media only screen and (max-width: 767px) {
+    .btn-landing {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Generales */
+h1 {
+    font-weight: bold;
+}
+
+.text-hl {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.margin-sep {
+    margin: 20px 5px;
+}
+
+.top-m {
+    margin-top: 10px;
+}
+
+.input-m {
+    margin-top: 20px;
+}
+
+.form-m {
+    margin-top: 20px;
+}
+
+.note {
+    font-style: italic;
+}
+
+/* NavBar */
+.main-menu{
+    align-items: right;
+}
+
+.main-bar {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 50px;
+}
+
+
+.nav-item-conf li {
+    margin-left: 15px;
+}
+
+.nav-item-conf li a span{
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nav-mob .container {
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-mob .container a{
+        text-align: center;
+    }
+    .navbar-brand a{
+        text-align: center;
+    }
+}
+
+/* Main Section */
+.reg-card h5 {
+    margin-top: 10px;
+}
+
+.links {
+    text-decoration: none;
+    color: #000000;
+}
+
+.items-center{
+    align-items: center;
+    text-align:  center;
+    margin-top: 10px;
+}
+
+.main-icon {
+    height: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
+}

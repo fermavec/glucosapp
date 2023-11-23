@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col">
+        <h2>Detalles del registro</h2>
+        <h3>{{ reading.reading_value }}
+            <span>
+            {% if reading.category == 1 %}Glucosa
+            {% elif reading.category == 2 %}Carbohidratos
+            {% elif reading.category == 3 %}Insulina
+            {% elif reading.category == 4 %}Ejercicio
+            {% else %}Otros
+            {% endif %}
+            </span>
+        </h3>
+        <p>Fecha de Registro: {{ reading.created_at }}</p>
+        <p>Notas sobre el registro: {{ reading.notes }}</p>
+    </div>
+{% endblock %}

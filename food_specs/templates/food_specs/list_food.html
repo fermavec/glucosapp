@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col">    
+    <div class="row align-items-end">
+        <hr>
+        {% include 'food_specs/snippets/search.html' %}
+        <!--<hr>
+        {% include 'food_specs/snippets/filter_form.html' with classifications=classifications %}-->
+        <hr>
+        <div class="col-md-6">
+            <h2 class="margin-sep">Alimentos</h2>
+        </div>
+    </div>
+    <hr>
+    {% include 'food_specs/snippets/table.html' %}
+</div>
+{% endblock %}

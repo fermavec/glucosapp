@@ -1,0 +1,26 @@
+<table class="top-m table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Lectura</th>
+            <th>Unidad</th>
+            <th>Categoría</th>
+            <th>Fecha</th>
+            <th>Notas</th>
+            <th>Acciones</th> <!-- Nueva columna para acciones -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for reading in object_list %}
+            <tr>
+                <td>{{ reading.reading_value }}</td>
+                <td>{{ reading.category.units }}</td>
+                <td>{{ reading.category.name }}</td>
+                <td>{{ reading.created_at }}</td>
+                <td>{{ reading.notes }}</td>
+                <td>
+                    <a href="{% url 'reading_delete' pk=reading.pk %}" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col">
+    <h2>Registro de Glucosa</h2>
+    <div class="">
+        <form method="post">
+        {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group input-m">
+                {{ field.label_tag }}
+                {{ field }}
+
+                {% if field.errors %}
+                {{ field.errors }}
+                {% endif %}
+            </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary input-m">Guardar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% load static %}
+
+<div class="row pb-6">
+    <div class="col-md-6 align-baseline">
+      <h1 class="top-m text-left">Bienvenido {{ user.username.capitalize }}</h1>
+    </div>
+    </div>
+    <h4>Selecciona la opción deseada:</h4>
+    <hr>
+    <div class="col-md-4 items-center">
+        <a href="{% url 'level_register' %}" class="card text-center center links">
+            <div class="card-body reg-card">
+                <img class="main-icon" src="{% static 'img/add.svg' %}" alt="Agregar control">
+                <h5 class="card-title">Agregar Registro</h5>
+                <p class="card-text">Ingresa un nuevo registro de control para la diabetes</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 items-center">
+        <a href="{% url 'list_readings' %}" class="card text-center center links">
+            <div class="card-body reg-card">
+                <img class="main-icon" src="{% static 'img/table.svg' %}" alt="Listado de Control de Diabetes">
+                <h5 class="card-title">Control de Diabetes</h5>
+                <p class="card-text">Listado de todos tus registros de control</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 items-center">
+        <a href="{% url 'anxiety_register' %}" class="card text-center center links">
+            <div class="card-body reg-card">
+                <img class="main-icon" src="{% static 'img/brain.svg' %}" alt="Agregar eventos de ansiedad">
+                <h5 class="card-title">Evento de Ansiedad</h5>
+                <p class="card-text">Agrega un evento a tu bitácora de ansiedad</p>
+            </div>
+        </a>
+    </div>
+    
+    <!--Segunda Fila-->
+    <div class="col-md-4 items-center">
+        <a href="{% url 'anxiety_list' %}" class="card text-center center links">
+            <div class="card-body reg-card">
+                <img class="main-icon" src="{% static 'img/book.svg' %}" alt="Bitacora de registros de ansiedad">
+                <h5 class="card-title">Bitácora de Ansiedad</h5>
+                <p class="card-text">Lista con todos los eventos de ansiedad registrados</p>
+            </div>
+        </a>
+    </div>
+    <!--Idea, poner un listado de las equivalencias de alimentos-->
+    <div class="col-md-4 items-center">
+        <a href="{% url 'list_food' %}" class="card text-center center links">
+            <div class="card-body reg-card">
+                <img class="main-icon" src="{% static 'img/burger.svg' %}" alt="">
+                <h5 class="card-title">Equivalencias de Alimentos</h5>
+                <p class="card-text">Listado del Sistema Mexicano de Alimentos Equivalentes</p>
+            </div>
+        </a>
+    </div>
+    <!--Idea, poner un Analytics-->
+    <div class="col-md-4 items-center">
+        <a href="#" class="card text-center center links">
+            <div class="card-body reg-card">
+                <img class="main-icon" src="{% static 'img/chart.svg' %}" alt="Analytics">
+                <h5 class="card-title">Analítica</h5>
+                <p class="card-text">Encuentra Insights sobre tus registros</p>
+            </div>
+        </a>
+    </div>
+    <tr>
+</div>

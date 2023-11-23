@@ -1,0 +1,26 @@
+<table class="top-m table table-bordered table-striped">
+    <thead class="thead-dark"></thead>
+        <tr>
+            <th>Alimento</th>
+            <th>Porción</th>
+            <th>Peso en gramos</th>
+            <th>Peso Neto en gramos</th>
+            <th>Energia en kcal</th>
+            <th>Carbohidratos en gramos</th>
+            <th>Clasificación</th>
+        </tr>
+    </thead>
+    <thbody>
+    {% for food in object_list %}
+        <tr>
+            <td>{{ food.food }}</th>
+            <td>{{ food.portion }}</th>
+            <td>{{ food.gross_weight }}</th>
+            <td>{{ food.net_weight }}</th>
+            <td>{{ food.energy }}</th>
+            <td>{{ food.carbs }}</th>
+            <td>{{ food.clasification }}</th>
+        </tr>
+        {% endfor %}
+    </thbody>
+</table>

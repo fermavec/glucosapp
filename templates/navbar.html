@@ -1,0 +1,37 @@
+{% url 'login' as login %}
+{% url 'register' as register %}
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark main-bar  nav-mob">
+    <div class="container">
+    <a href="{% url 'home' %}" class="navbar-brand">FM Glucosapp</a>
+    </div>
+
+    <div class="container main-menu">
+    <ul class="navbar-nav ml-auto">
+        {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a href="{% url 'logout' %}" class="nav-link">
+                    <span class="fas fa-sign-in-alt"></span> Logout
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item {% if request.path == login %} active {% endif %}">
+                <a href="{{ login }}" class="nav-link">
+                    <span class="fas fa-user"></span> Login
+                </a>
+            </li>
+            <li class="nav-item {% if request.path == register %}active{% endif %}">
+                <a href="{{ register }}" class="nav-link">
+                    <span class="fas fa-user-plus"></span> Registro
+                </a>
+            </li>
+        {% endif %}
+
+        <li class="nav-item">
+            <a href="http://fermavec.com" class="nav-link">
+                <span class="fas fa-link"></span> Fer Mavec
+            </a>
+        </li>
+    </ul>
+    </div>
+</nav>

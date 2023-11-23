@@ -1,0 +1,28 @@
+<table class="top-m table table-bordered table-striped">
+    <thead class="thead-dark"></thead>
+        <tr>
+            <th>Nivel de Ansiedad</th>
+            <th>Ataque de Pánico</th>
+            <th>Notas</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <thbody>
+    {% for reading in object_list %}
+        <tr>
+            <td>{{ reading.anxiety_level }}</th>
+            {% if reading.panic_attack %}
+            <td>Si</th>
+            {% else %}
+            <td>No</th>
+            {% endif %}
+            <td>{{ reading.notes }}</th>
+            <td>{{ reading.created_at }}</th>
+            <td>
+                <a href="{% url 'register_delete' pk=reading.pk %}" class="btn btn-danger btn-sm">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </thbody>
+</table>
